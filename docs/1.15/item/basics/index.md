@@ -45,6 +45,11 @@ public class TutItems
 }
 ```
 
+Небольшая правка (я не создатель статьи), создать обьект через new лично у меня не получилось создать Defferred Register через "new", тут стоит использовать метод create()
+```
+private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, TestMod.MOD_ID);
+```
+
 Всё! Вот так быстро и просто мы создали основной класс для регистрации предметов. Чтобы использовать наш предмет,
 где-то в моде, достаточно написать `TutItems.KEY.get()`. Осталось добавить `TutItems.register()` в коструктор главного класса нашего мода.
 
